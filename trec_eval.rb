@@ -2,8 +2,8 @@ require "formula"
 
 class TrecEval < Formula
   homepage "http://trec.nist.gov/trec_eval/"
-  url "http://trec.nist.gov/trec_eval/trec_eval.8.1.tar.gz"
-  sha1 "b983948d797ae9ca80845b90742cdb7176ace7d5"
+  url "http://trec.nist.gov/trec_eval/trec_eval_latest.tar.gz"
+  sha256 "1e6d197293af63b22b52f747d4c7db87227d4ef9cb0d0982d17dac802713b73e"
 
 
   def install
