@@ -1,12 +1,12 @@
 class Indri < Formula
   desc "search engine that provides state-of-the-art text search and a rich structured query language for text collections of up to 50 million documents"
   homepage "http://lemurproject.org/indri.php"
-  url "http://downloads.sourceforge.net/project/lemur/lemur/indri-5.11/indri-5.11.tar.gz"
+  url "https://github.com/bpiwowar/indri-git.git", :tag => "5.11"
   version "5.11"
-  sha256 "e9a1dcd02e2dc12742f8b257ae8ea341f19c4fcf931c84d95f655fe57885ac85"
 
   def install
-    # ENV.deparallelize  # if your formula fails when building in parallel
+    # Create directories removed with git
+    system "mkdir", "obj", "contrib/antlr/obj", "contrib/xpdf/obj", "contrib/zlib/obj", "contrib/lemur/obj"
 
     # Remove unrecognized options if warned by configure
     system "sh", "./configure", "--disable-debug",
